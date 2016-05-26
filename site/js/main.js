@@ -1,21 +1,22 @@
+var loadedImages = 0;
+
 function imageLoaded() {
-	(typeof window.loadedImages === 'undefined')
-		? window.loadedImages = 1
-		: window.loadedImages++;
+	(typeof loadedImages === 'undefined')
+		? loadedImages = 1
+		: loadedImages++;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
 	var posters = document.querySelector('.posters__list');
-	var images = posters.querySelectorAll('img');
+	var images = posters.getElementsByTagName('img');
+	var loader = document.querySelector('.loader');
+	var timer = 0;
 
-	setTimeout(function () {
-		var msry = new Masonry(posters, {});
-	}, 500);
-
-	var timer = setInterval(function () {
+	timer = setInterval(function () {
 		if (typeof loadedImages !== 'undefined') {
 			if (images.length === loadedImages)	{
 				var msry = new Masonry(posters, {});
+				loader.classList.add('loaded');
 				clearInterval(timer);
 			}
 		}

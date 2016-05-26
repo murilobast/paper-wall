@@ -64,6 +64,33 @@ object {
     font-size: 36px;
   }
 }
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 10;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.loader.loaded {
+  opacity: 0;
+  top: -100vh;
+  transition: opacity 0.5s ease, top 0s ease 0.5s;
+}
+.loader__spinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  opacity: 0.85;
+}
 .posters__list {
   font-size: 0;
 }

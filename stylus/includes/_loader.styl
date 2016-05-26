@@ -1,0 +1,25 @@
+.loader
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	background-color rgba(255, 255, 255, .7)
+	z-index 10
+	top 0
+	opacity 1
+	transition opacity .5s ease;
+	&.loaded
+		opacity 0
+		top -100vh
+		transition opacity .5s ease, top 0s ease .5s;
+	&__spinner
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		margin auto
+		display block
+		opacity .85 
+		
