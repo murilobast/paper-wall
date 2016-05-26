@@ -1,0 +1,9 @@
+section.posters
+	ul.posters__list
+		- var n = 1
+		while n < 13
+			li.posters__list__poster
+				img(src="/img/" + n++ + ".jpg" onload="imageLoaded()").posters__list__poster__image
+				.posters__list__poster__desc
+					h3 This is a poster
+					p And I'm over the wall!

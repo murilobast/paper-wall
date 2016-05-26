@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Bad+Script");
+/* Reset */
+.site,
+.header {
+  max-width: 1200px;
+  margin: auto;
+}
+body {
+  background-image: url("/img/paper.jpg");
+  background-size: 100%;
+  font-family: 'Bad Script', cursive;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+object {
+  display: none;
+}
+/* Reset */
+.header {
+  padding: 2% 7%;
+  box-sizing: border-box;
+}
+.header__title,
+.header__subtitle {
+  margin: 0;
+  transition: all 0.3s ease;
+}
+.header__title {
+  font-size: 48px;
+}
+.header__subtitle {
+  font-size: 26px;
+  line-height: 1;
+}
+@media (min-width: 639px) {
+  .header {
+    padding: 2% 5%;
+  }
+  .header__title {
+    font-size: 56px;
+  }
+  .header__subtitle {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 2%;
+  }
+  .header__title {
+    font-size: 64px;
+  }
+  .header__subtitle {
+    font-size: 36px;
+  }
+}
+.posters__list {
+  font-size: 0;
+}
+.posters__list__poster {
+  width: 100%;
+  padding: 7%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.posters__list__poster__image {
+  width: 100%;
+  box-shadow: 17px 17px 14px -10px rgba(0,0,0,0.45);
+}
+@media (min-width: 639px) {
+  .posters__list__poster {
+    width: 50%;
+    padding: 2%;
+  }
+}

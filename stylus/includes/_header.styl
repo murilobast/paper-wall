@@ -1,0 +1,25 @@
+.header
+	padding 2% 7%
+	box-sizing border-box
+	&__title, &__subtitle
+		margin 0
+		transition all .3s ease
+	&__title
+		font-size 48px
+	&__subtitle
+		font-size 26px
+		line-height 1
+		
+	// responsive
+	@media (min-width: 639px)
+		padding 2% 5%
+		&__title
+			font-size 56px 
+		&__subtitle
+			font-size 30px 
+	@media (min-width: 1024px)
+		padding 2%
+		&__title
+			font-size 64px
+		&__subtitle
+			font-size 36px
